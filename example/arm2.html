@@ -1,0 +1,33 @@
+<html>
+<head>
+  <script src="../src/lib.js" ></script>
+  <style>
+  html, body {
+    overflow: hidden;
+  }
+  </style>
+</head>
+<body>
+  <div id="square" style="width: 100px; height: 100px; background: blue; position: absolute;">
+  </div>
+  <iframe src="arm4.html" style="width: 50%; height: 100%; position: absolute; left: 50%;" ></iframe>
+  <script>
+    var sq = document.getElementById('square');
+
+    ir.setName('pete');
+
+    ir.on('allblue', function(){
+      sq.style.backgroundColor= 'blue';
+    })
+
+    ir.on('greet', function(evt){
+      console.log(evt);
+    })
+
+    ir.on('clicked', function(evt){
+      sq.style.left = evt.x;
+      sq.style.top = evt.y;
+    })
+  </script>
+</body>
+</html>

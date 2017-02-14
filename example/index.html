@@ -1,0 +1,48 @@
+<html>
+<head>
+  <script src="../src/lib.js" ></script>
+  <style>
+  body {
+    overflow: hidden;
+  }
+    iframe {
+      position: absolute;
+      width: 50%;
+      height: 50%;
+    }
+    .a {
+      left: 0;
+      top: 100px;
+    }
+    .b {
+      right: 0px;
+      top: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+    .c {
+      left: 0px;
+      top: 50%;
+    }
+    .d {
+      right: 0;
+      top: 50%;
+    }
+  </style>
+</head>
+<body>
+  <button id="bluebtn">
+    All Blue
+  </button>
+  <iframe name="a1" src="arm1.html" class="a" ></iframe>
+  <iframe src="arm2.html" class="b" ></iframe>
+  <!-- <iframe src="arm3.html" class="c" ></iframe> -->
+  <!-- <iframe src="arm4.html" class="d" ></iframe> -->
+
+  <script>
+  document.getElementById('bluebtn').addEventListener('click', function(){
+    ir.broadcast('allblue');
+  })
+  </script>
+</body>
+</html>

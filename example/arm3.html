@@ -1,0 +1,28 @@
+<html>
+<head>
+  <script src="../src/lib.js" ></script>
+</head>
+<body>
+  <div id="square" style="width: 100px; height: 100px; background: green; position: absolute;">
+  </div>
+  <script>
+    var sq = document.getElementById('square');
+
+    // ir.setName('sanchez');
+
+    window.addEventListener('click', function(){
+      ir.tell('pete', 'greet', 'whattup!');
+      ir.broadcast('greet', 'herro');
+    })
+
+    ir.on('allblue', function(){
+      sq.style.backgroundColor= 'blue';
+    })
+
+    ir.on('clicked', function(evt){
+      sq.style.left = evt.x;
+      sq.style.top = evt.y;
+    })
+  </script>
+</body>
+</html>
